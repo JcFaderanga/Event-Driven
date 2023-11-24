@@ -1,0 +1,16 @@
+C:\Users\User1\source\repos\Inventory System\Inventory System\bin\Debug\Inventory System.exe.config
+C:\Users\User1\source\repos\Inventory System\Inventory System\bin\Debug\Inventory System.exe
+C:\Users\User1\source\repos\Inventory System\Inventory System\bin\Debug\Inventory System.pdb
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory System.csproj.AssemblyReference.cache
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.Properties.Resources.resources
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory System.csproj.GenerateResource.cache
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory System.csproj.CoreCompileInputs.cache
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory System.exe
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory System.pdb
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.DASHBOARD.resources
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.KKD.resources
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.ProductForm.resources
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.ReportsForm.resources
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.TransactionsForm.resources
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.UserForm.resources
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.dashbordForm.resources
