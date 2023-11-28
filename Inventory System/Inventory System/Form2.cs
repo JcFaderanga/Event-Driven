@@ -7,45 +7,96 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Inventory_System
 {
     public partial class dashboard : Form
     {
+        
         public dashboard()
         {
             InitializeComponent();
             //display dashboard after login 
-            dashbordForm dashboard = new dashbordForm();
+            int totalCount = GetTotalRowCount();
+            dashbordForm dashboard = new dashbordForm(totalCount);
             dashboard.TopLevel = false;
             container.Controls.Add(dashboard);
             dashboard.Show();
-
             //Onclick funtions
             dashboardBox.Click += nav_Click;
             productbox.Click += nav_Click;
             reportBox.Click += nav_Click;
             userBox.Click += nav_Click;
             transactionBox.Click += nav_Click;
+
         }
+        private int GetTotalRowCount()
+        {
+            string connection = "server=localhost;username=root;password=;database=inventorysystem";
+            using (MySqlConnection conn = new MySqlConnection(connection))
+            {
+                conn.Open();
+
+                string query = "SELECT COUNT(*) AS total_rows FROM products";
+
+                using (MySqlCommand command = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return Convert.ToInt32(reader["total_rows"]);
+                        }
+                    }
+                }
+            }
+
+            return 0; // Default to 0 if there is an issue
+        }
+        private DataTable GetDataFromDatabase()
+        {
+            //Product Form database code
+            string connection = "server=localhost;username=root;password=;database=inventorysystem";
+            string query = "SELECT product_id, product_name, category FROM products";
+
+            using (MySqlConnection conn = new MySqlConnection(connection))
+            {
+                conn.Open();
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
+       
         private void nav_Click(object sender, EventArgs e)
         {
             if (sender == dashboardBox)
             {
                 //OPEN DASHBOARD FORM
                 ClearPanelControls(container);
-                dashbordForm dashboard = new dashbordForm();
+                int totalCount = GetTotalRowCount();
+                dashbordForm dashboard = new dashbordForm(totalCount);
                 dashboard.TopLevel = false;
                 container.Controls.Add(dashboard);
                 dashboard.Show();
             }
             else if (sender == productbox){
                 //OPEN PRDUCT FORM
-                ClearPanelControls(container);
-                ProductForm Product = new ProductForm();
-                Product.TopLevel = false;
-                container.Controls.Add(Product);
-                Product.Show();
+                 ClearPanelControls(container);
+                int totalCount = GetTotalRowCount();
+                DataTable productsData = GetDataFromDatabase();
+                   ProductForm Product = new ProductForm(productsData);
+                   Product.TopLevel = false;
+                   container.Controls.Add(Product);
+                   Product.Show(); 
             }
             else if (sender == userBox) {
                 //OPEN USER FORM
@@ -261,6 +312,9 @@ namespace Inventory_System
 
         }
 
-        
+        private void productbox_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

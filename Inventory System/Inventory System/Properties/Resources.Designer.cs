@@ -73,6 +73,16 @@ namespace Inventory_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap box_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("box-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cart_add_regular_24 {
             get {
                 object obj = ResourceManager.GetObject("cart-add-regular-24", resourceCulture);
@@ -146,6 +156,16 @@ namespace Inventory_System.Properties {
         internal static System.Drawing.Bitmap package_regular_24 {
             get {
                 object obj = ResourceManager.GetObject("package-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap package_regular_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("package-regular-24 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

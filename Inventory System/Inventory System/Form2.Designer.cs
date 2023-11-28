@@ -31,34 +31,34 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.transactionBox = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.navLblTranscation = new System.Windows.Forms.Label();
             this.dashboardBox = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.navLbdashboard = new System.Windows.Forms.Label();
             this.userBox = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.navLblUsers = new System.Windows.Forms.Label();
             this.productbox = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.navLblProduct = new System.Windows.Forms.Label();
             this.reportBox = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.navLblReports = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.container = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel18.SuspendLayout();
             this.transactionBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.dashboardBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.userBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.productbox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.reportBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -101,17 +101,6 @@
             this.transactionBox.MouseLeave += new System.EventHandler(this.transactionBox_MouseLeave);
             this.transactionBox.MouseHover += new System.EventHandler(this.transactionBox_MouseHover);
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Inventory_System.Properties.Resources.trending_up_regular_24;
-            this.pictureBox6.Location = new System.Drawing.Point(13, 8);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox6.TabIndex = 12;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
             // navLblTranscation
             // 
             this.navLblTranscation.AutoSize = true;
@@ -139,17 +128,6 @@
             this.dashboardBox.MouseLeave += new System.EventHandler(this.dashboardBox_MouseLeave_1);
             this.dashboardBox.MouseHover += new System.EventHandler(this.dashboardBox_MouseHover);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Inventory_System.Properties.Resources.dashboard_solid_24__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // navLbdashboard
             // 
             this.navLbdashboard.AutoSize = true;
@@ -176,17 +154,6 @@
             this.userBox.MouseLeave += new System.EventHandler(this.userBox_MouseLeave);
             this.userBox.MouseHover += new System.EventHandler(this.userBox_MouseHover);
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Inventory_System.Properties.Resources.user_solid_24;
-            this.pictureBox5.Location = new System.Drawing.Point(13, 8);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 12;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
             // navLblUsers
             // 
             this.navLblUsers.AutoSize = true;
@@ -210,19 +177,9 @@
             this.productbox.Name = "productbox";
             this.productbox.Size = new System.Drawing.Size(239, 46);
             this.productbox.TabIndex = 13;
+            this.productbox.Paint += new System.Windows.Forms.PaintEventHandler(this.productbox_Paint);
             this.productbox.MouseLeave += new System.EventHandler(this.productbox_MouseLeave);
             this.productbox.MouseHover += new System.EventHandler(this.productbox_MouseHover);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Inventory_System.Properties.Resources.package_regular_24;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // navLblProduct
             // 
@@ -249,17 +206,6 @@
             this.reportBox.TabIndex = 14;
             this.reportBox.MouseLeave += new System.EventHandler(this.reportBox_MouseLeave);
             this.reportBox.MouseHover += new System.EventHandler(this.reportBox_MouseHover);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Inventory_System.Properties.Resources.report_solid_24;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // navLblReports
             // 
@@ -289,6 +235,68 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // container
+            // 
+            this.container.Location = new System.Drawing.Point(239, 1);
+            this.container.Name = "container";
+            this.container.Size = new System.Drawing.Size(1043, 699);
+            this.container.TabIndex = 11;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Inventory_System.Properties.Resources.trending_up_regular_24;
+            this.pictureBox6.Location = new System.Drawing.Point(13, 8);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 12;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Inventory_System.Properties.Resources.dashboard_solid_24__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Inventory_System.Properties.Resources.user_solid_24;
+            this.pictureBox5.Location = new System.Drawing.Point(13, 8);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 12;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Inventory_System.Properties.Resources.package_regular_24;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Inventory_System.Properties.Resources.report_solid_24;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(191)))));
@@ -300,13 +308,6 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // container
-            // 
-            this.container.Location = new System.Drawing.Point(239, 1);
-            this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(1043, 699);
-            this.container.TabIndex = 11;
             // 
             // dashboard
             // 
@@ -325,18 +326,18 @@
             this.panel18.ResumeLayout(false);
             this.transactionBox.ResumeLayout(false);
             this.transactionBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.dashboardBox.ResumeLayout(false);
             this.dashboardBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.userBox.ResumeLayout(false);
             this.userBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.productbox.ResumeLayout(false);
             this.productbox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.reportBox.ResumeLayout(false);
             this.reportBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

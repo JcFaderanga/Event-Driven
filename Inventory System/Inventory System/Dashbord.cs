@@ -12,12 +12,23 @@ namespace Inventory_System
 {
     public partial class dashbordForm : Form
     {
-        public dashbordForm()
+        public dashbordForm(int totalCount)
         {
             InitializeComponent();
+            totalProduct.Text = $"{totalCount}";
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void totalProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart2_Click(object sender, EventArgs e)
         {
 
         }
