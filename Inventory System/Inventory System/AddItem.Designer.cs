@@ -40,9 +40,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtproductname = new System.Windows.Forms.TextBox();
             this.productNameBox = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numstock = new System.Windows.Forms.NumericUpDown();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.categoryBox.SuspendLayout();
             this.priceBox.SuspendLayout();
             this.productNameBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numstock)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSave
@@ -50,7 +55,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(254)))));
             this.btnSave.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(793, 156);
+            this.btnSave.Location = new System.Drawing.Point(775, 170);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(123, 34);
             this.btnSave.TabIndex = 0;
@@ -63,9 +68,9 @@
             this.categoryBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.categoryBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.categoryBox.Controls.Add(this.txtcategory);
-            this.categoryBox.Location = new System.Drawing.Point(383, 109);
+            this.categoryBox.Location = new System.Drawing.Point(383, 105);
             this.categoryBox.Name = "categoryBox";
-            this.categoryBox.Size = new System.Drawing.Size(248, 29);
+            this.categoryBox.Size = new System.Drawing.Size(230, 29);
             this.categoryBox.TabIndex = 6;
             // 
             // txtcategory
@@ -86,7 +91,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(380, 88);
+            this.label1.Location = new System.Drawing.Point(380, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 18);
             this.label1.TabIndex = 7;
@@ -96,7 +101,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 88);
+            this.label2.Location = new System.Drawing.Point(97, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 18);
             this.label2.TabIndex = 8;
@@ -106,7 +111,7 @@
             // 
             this.lblprice.AutoSize = true;
             this.lblprice.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprice.Location = new System.Drawing.Point(665, 88);
+            this.lblprice.Location = new System.Drawing.Point(667, 84);
             this.lblprice.Name = "lblprice";
             this.lblprice.Size = new System.Drawing.Size(49, 18);
             this.lblprice.TabIndex = 10;
@@ -118,9 +123,9 @@
             this.priceBox.BackColor = System.Drawing.Color.White;
             this.priceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.priceBox.Controls.Add(this.txtprice);
-            this.priceBox.Location = new System.Drawing.Point(668, 109);
+            this.priceBox.Location = new System.Drawing.Point(670, 105);
             this.priceBox.Name = "priceBox";
-            this.priceBox.Size = new System.Drawing.Size(248, 29);
+            this.priceBox.Size = new System.Drawing.Size(229, 29);
             this.priceBox.TabIndex = 9;
             this.priceBox.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -166,10 +171,38 @@
             this.productNameBox.BackColor = System.Drawing.Color.White;
             this.productNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.productNameBox.Controls.Add(this.txtproductname);
-            this.productNameBox.Location = new System.Drawing.Point(83, 109);
+            this.productNameBox.Location = new System.Drawing.Point(100, 105);
             this.productNameBox.Name = "productNameBox";
-            this.productNameBox.Size = new System.Drawing.Size(248, 29);
+            this.productNameBox.Size = new System.Drawing.Size(231, 29);
             this.productNameBox.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(97, 155);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 18);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Stock:";
+            // 
+            // numstock
+            // 
+            this.numstock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numstock.Location = new System.Drawing.Point(4, 6);
+            this.numstock.Name = "numstock";
+            this.numstock.Size = new System.Drawing.Size(222, 16);
+            this.numstock.TabIndex = 19;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.numstock);
+            this.panel1.Location = new System.Drawing.Point(100, 176);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(231, 29);
+            this.panel1.TabIndex = 17;
             // 
             // AddItem
             // 
@@ -177,6 +210,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1006, 507);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.lblprice);
@@ -196,6 +231,8 @@
             this.priceBox.PerformLayout();
             this.productNameBox.ResumeLayout(false);
             this.productNameBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numstock)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,5 +252,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtproductname;
         private System.Windows.Forms.Panel productNameBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown numstock;
+        private System.Windows.Forms.Panel panel1;
     }
 }

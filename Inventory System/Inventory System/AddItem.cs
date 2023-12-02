@@ -23,13 +23,14 @@ namespace Inventory_System
         private void btnSave_Click(object sender, EventArgs e)
         {
             string connection = "server=localhost;username=root;password=;database=inventorysystem";
-            string query = "INSERT INTO products(product_name, category, price)VALUES('" + this.txtproductname.Text + "','" + this.txtcategory.Text + "','" + this.txtprice.Text +"')";
+            string query = "INSERT INTO products(product_name, category, price, quantity)VALUES('" + this.txtproductname.Text + "','" + this.txtcategory.Text + "','" + this.txtprice.Text + "','" + this.numstock.Text +"')";
             MySqlConnection conn = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, conn);
             MySqlDataReader dr;
             conn.Open();
             dr = cmd.ExecuteReader();
             txtproductname.Text = string.Empty;
+            txtprice.Text = string.Empty;
             txtprice.Text = string.Empty;
             MessageBox.Show("Successfully saved");
             conn.Close();

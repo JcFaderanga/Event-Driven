@@ -33,13 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.productContainer = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAll = new System.Windows.Forms.Button();
+            this.btnhighStocks = new System.Windows.Forms.Button();
+            this.bltLowStocks = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.bltLowStocks = new System.Windows.Forms.Button();
-            this.btnhighStocks = new System.Windows.Forms.Button();
-            this.btnAll = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.productContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,55 @@
             this.productContainer.Size = new System.Drawing.Size(1018, 508);
             this.productContainer.TabIndex = 17;
             this.productContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.productContainer_Paint);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(191)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(878, 47);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 34);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Update";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnAll
+            // 
+            this.btnAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
+            this.btnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAll.Location = new System.Drawing.Point(10, 47);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(128, 34);
+            this.btnAll.TabIndex = 20;
+            this.btnAll.Text = "Show all";
+            this.btnAll.UseVisualStyleBackColor = false;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
+            // 
+            // btnhighStocks
+            // 
+            this.btnhighStocks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
+            this.btnhighStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnhighStocks.Location = new System.Drawing.Point(147, 47);
+            this.btnhighStocks.Name = "btnhighStocks";
+            this.btnhighStocks.Size = new System.Drawing.Size(128, 34);
+            this.btnhighStocks.TabIndex = 19;
+            this.btnhighStocks.Text = "Show high stocks";
+            this.btnhighStocks.UseVisualStyleBackColor = false;
+            this.btnhighStocks.Click += new System.EventHandler(this.btnhighStocks_Click);
+            // 
+            // bltLowStocks
+            // 
+            this.bltLowStocks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
+            this.bltLowStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bltLowStocks.Location = new System.Drawing.Point(284, 47);
+            this.bltLowStocks.Name = "bltLowStocks";
+            this.bltLowStocks.Size = new System.Drawing.Size(128, 34);
+            this.bltLowStocks.TabIndex = 18;
+            this.bltLowStocks.Text = "Show low Stocks";
+            this.bltLowStocks.UseVisualStyleBackColor = false;
+            this.bltLowStocks.Click += new System.EventHandler(this.bltLowStocks_Click);
             // 
             // panel4
             // 
@@ -120,54 +169,6 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Inventory";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // bltLowStocks
-            // 
-            this.bltLowStocks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
-            this.bltLowStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bltLowStocks.Location = new System.Drawing.Point(284, 47);
-            this.bltLowStocks.Name = "bltLowStocks";
-            this.bltLowStocks.Size = new System.Drawing.Size(128, 34);
-            this.bltLowStocks.TabIndex = 18;
-            this.bltLowStocks.Text = "Show low Stocks";
-            this.bltLowStocks.UseVisualStyleBackColor = false;
-            this.bltLowStocks.Click += new System.EventHandler(this.bltLowStocks_Click);
-            // 
-            // btnhighStocks
-            // 
-            this.btnhighStocks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
-            this.btnhighStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnhighStocks.Location = new System.Drawing.Point(147, 47);
-            this.btnhighStocks.Name = "btnhighStocks";
-            this.btnhighStocks.Size = new System.Drawing.Size(128, 34);
-            this.btnhighStocks.TabIndex = 19;
-            this.btnhighStocks.Text = "Show high stocks";
-            this.btnhighStocks.UseVisualStyleBackColor = false;
-            this.btnhighStocks.Click += new System.EventHandler(this.btnhighStocks_Click);
-            // 
-            // btnAll
-            // 
-            this.btnAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
-            this.btnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAll.Location = new System.Drawing.Point(10, 47);
-            this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(128, 34);
-            this.btnAll.TabIndex = 20;
-            this.btnAll.Text = "Show all";
-            this.btnAll.UseVisualStyleBackColor = false;
-            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(191)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(878, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 34);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // Inventory
             // 

@@ -10,16 +10,20 @@ using System.Windows.Forms;
 
 namespace Inventory_System
 {
-    public partial class ReportsForm : Form
+    public partial class UserRecords : Form
     {
-        public ReportsForm()
+        public UserRecords(DataTable data)
         {
             InitializeComponent();
+            LoadData(data);
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void LoadData(DataTable data)
         {
-          
+            dataGridView1.DataSource = data;
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

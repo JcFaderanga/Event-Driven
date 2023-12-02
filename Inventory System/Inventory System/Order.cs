@@ -13,12 +13,17 @@ namespace Inventory_System
 {
     public partial class Order : Form
     {
-        public Order()
+        public Order(DataTable data)
         {
             InitializeComponent();
+            LoadData(data);
 
         }
-
+        public MySqlConnection connection = new MySqlConnection();
+        private void LoadData(DataTable data)
+        {
+            dataGridView1.DataSource = data;
+        }
         private void Order_Load(object sender, EventArgs e)
         {
 
@@ -32,7 +37,7 @@ namespace Inventory_System
         private void button1_Click(object sender, EventArgs e)
         {
             string connection = "server=localhost;username=root;password=;database=inventorysystem";
-            string query = "SELECT product_id, product_name,quantity FROM products WHERE QUANTITY < 20";
+            string query = "SELECT product_id, product_name,quantity FROM products";
             MySqlConnection conn = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, conn);
             MySqlDataAdapter da = new MySqlDataAdapter();
@@ -40,20 +45,34 @@ namespace Inventory_System
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
-            string query2 = "SELECT product_id, product_name,quantity FROM products";
-            MySqlConnection conn2 = new MySqlConnection(connection);
-            MySqlCommand cmd2 = new MySqlCommand(query2, conn2);
-            MySqlDataAdapter da2 = new MySqlDataAdapter();
-            da2.SelectCommand = cmd2;
-            DataTable dt2 = new DataTable();
-            da2.Fill(dt2);
-            dataGridView2.DataSource = dt2;
+          
 
         }
 
         private void btnAll_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnorder_Click(object sender, EventArgs e)
+        {
+            string connection = "server=localhost;username=root;password=;database=inventorysystem";
+            string query = "INSERT INTO tblrestock(product_id, product_name, stocks )VALUES('" + this.txtproductid.Text + "','" + this.txtproductname.Text + "','" + this.txtstock.Text + "')";
+            MySqlConnection conn = new MySqlConnection(connection);
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader dr;
+            conn.Open();
+            dr = cmd.ExecuteReader();
+            txtproductname.Text = string.Empty;
+            txtproductid.Text = string.Empty;
+            txtstock.Text = string.Empty;
+            MessageBox.Show("Successfully saved");
+            conn.Close();
         }
     }
 }

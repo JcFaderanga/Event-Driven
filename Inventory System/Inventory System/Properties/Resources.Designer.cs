@@ -123,6 +123,16 @@ namespace Inventory_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap history_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("history-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kkd_logo_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("kkd-logo-removebg-preview", resourceCulture);
@@ -226,6 +236,16 @@ namespace Inventory_System.Properties {
         internal static System.Drawing.Bitmap truck_solid_24 {
             get {
                 object obj = ResourceManager.GetObject("truck-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_plus_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("user-plus-solid-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

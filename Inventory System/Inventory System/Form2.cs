@@ -4,22 +4,24 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Inventory_System
 {
     public partial class dashboard : Form
     {
         
-        public dashboard()
+        
+        public dashboard(string UserId, string firstName, string lastName)
         {
             InitializeComponent();
-            //display dashboard after login 
-            int totalCount = GetTotalRowCount();
-            dashbordForm dashboard = new dashbordForm(totalCount);
+            UpdateLabel(UserId, firstName, lastName);
+            dashbordForm dashboard = new dashbordForm();
             dashboard.TopLevel = false;
             container.Controls.Add(dashboard);
             dashboard.Show();
@@ -29,6 +31,12 @@ namespace Inventory_System
             reportBox.Click += nav_Click;
             userBox.Click += nav_Click;
             transactionBox.Click += nav_Click;
+
+        }
+        public void UpdateLabel(string UserId, string firstName, string lastName)
+        {
+            this.txtUserId.Text = $"{UserId}";
+            AdminName.Text = $"{firstName} {lastName}";
 
         }
         private int GetTotalRowCount()
@@ -51,9 +59,9 @@ namespace Inventory_System
                     }
                 }
             }
-
             return 0; // Default to 0 if there is an issue
         }
+
         private DataTable GetDataFromDatabase()
         {
             //Product Form database code
@@ -75,15 +83,34 @@ namespace Inventory_System
                 }
             }
         }
-       
+        private DataTable GetDataFromDatabaseAdminRecord()
+        {
+            string connection = "server=localhost;username=root;password=;database=inventorysystem";
+            string query = "SELECT UserId,firstname,lastname, Username, CONCAT(LEFT(password, 1),REPEAT('*', LENGTH(password) - 1)) AS password FROM users";
+
+            using (MySqlConnection conn = new MySqlConnection(connection))
+            {
+                conn.Open();
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
+
         private void nav_Click(object sender, EventArgs e)
         {
             if (sender == dashboardBox)
             {
                 //OPEN DASHBOARD FORM
                 ClearPanelControls(container);
-                int totalCount = GetTotalRowCount();
-                dashbordForm dashboard = new dashbordForm(totalCount);
+                dashbordForm dashboard = new dashbordForm(); 
                 dashboard.TopLevel = false;
                 container.Controls.Add(dashboard);
                 dashboard.Show();
@@ -101,7 +128,8 @@ namespace Inventory_System
             else if (sender == userBox) {
                 //OPEN USER FORM
                 ClearPanelControls(container);
-                UserForm User = new UserForm();
+                DataTable recordData = GetDataFromDatabaseAdminRecord();
+                UserForm User = new UserForm(recordData);
                 User.TopLevel = false;
                 container.Controls.Add(User);
                 User.Show();
@@ -157,7 +185,17 @@ namespace Inventory_System
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //LOG OUT BACK TO LOGIN FORM
+            string action = "Logged out";
+            string userid = txtUserId.Text;
+            string connection = "server=localhost;username=root;password=;database=inventorysystem";
+            string query = "INSERT INTO admin_records(UserId, Action)VALUES('" + userid + "','" + action + "')";
+            MySqlConnection conn = new MySqlConnection(connection);
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader dr;
+            conn.Open();
+            dr = cmd.ExecuteReader();
+            conn.Close();
+            // Close the current form and show the login form
             this.Hide();
             KKD frm1 = new KKD();
             frm1.Show();
@@ -313,6 +351,16 @@ namespace Inventory_System
         }
 
         private void productbox_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AdminName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminName_TextChanged(object sender, EventArgs e)
         {
 
         }

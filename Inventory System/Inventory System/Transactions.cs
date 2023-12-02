@@ -19,9 +19,7 @@ namespace Inventory_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            dashboard dashboard = new dashboard();
-            dashboard.Show();
+            
         }
     }
 }

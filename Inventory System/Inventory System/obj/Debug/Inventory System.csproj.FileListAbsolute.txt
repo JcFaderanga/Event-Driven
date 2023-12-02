@@ -19,3 +19,5 @@ C:\Users\User1\source\repos\Inventory System\Inventory System\bin\Debug\MySql.Da
 C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory System.csproj.CopyComplete
 C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.Inventory.resources
 C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.Order.resources
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.AddUsers.resources
+C:\Users\User1\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.UserRecords.resources

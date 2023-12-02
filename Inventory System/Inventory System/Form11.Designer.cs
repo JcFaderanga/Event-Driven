@@ -31,7 +31,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnlogin = new System.Windows.Forms.Button();
             this.usernamePanel = new System.Windows.Forms.Panel();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.passwordPanel = new System.Windows.Forms.Panel();
@@ -74,18 +74,18 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
-            // button1
+            // btnlogin
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(191)))));
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(17, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(248, 41);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(191)))));
+            this.btnlogin.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.ForeColor = System.Drawing.Color.White;
+            this.btnlogin.Location = new System.Drawing.Point(17, 159);
+            this.btnlogin.Name = "btnlogin";
+            this.btnlogin.Size = new System.Drawing.Size(248, 41);
+            this.btnlogin.TabIndex = 4;
+            this.btnlogin.Text = "LOGIN";
+            this.btnlogin.UseVisualStyleBackColor = false;
+            this.btnlogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // usernamePanel
             // 
@@ -131,7 +131,7 @@
             // 
             this.loginBox.Controls.Add(this.passwordPanel);
             this.loginBox.Controls.Add(this.usernamePanel);
-            this.loginBox.Controls.Add(this.button1);
+            this.loginBox.Controls.Add(this.btnlogin);
             this.loginBox.Controls.Add(this.label2);
             this.loginBox.Controls.Add(this.label1);
             this.loginBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,7 +168,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Panel usernamePanel;
         private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.Panel passwordPanel;

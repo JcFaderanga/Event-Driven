@@ -46,7 +46,8 @@ namespace Inventory_System
             {
                 //OPEN ORDER FORM INSIDE PRODUCT FORM
                 ClearPanelControls(productContainer);
-                Order order = new Order();
+                DataTable Stocks = Restock();
+                Order order = new Order(Stocks);
                 order.TopLevel = false;
                 productContainer.Controls.Add(order);
                 order.Show();
@@ -82,6 +83,27 @@ namespace Inventory_System
                 }
             }
         }
+        private DataTable Restock()
+        {
+            string connection = "server=localhost;username=root;password=;database=inventorysystem";
+            string query = "SELECT product_id, product_name,quantity FROM products WHERE QUANTITY < 20";
+
+            using (MySqlConnection conn = new MySqlConnection(connection))
+            {
+                conn.Open();
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
+      
 
         private void ClearPanelControls(Panel panel)
         {
@@ -96,9 +118,7 @@ namespace Inventory_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            dashboard dashboard = new dashboard();
-            dashboard.Show();
+
         }
 
         private void ProductForm_Load(object sender, EventArgs e)

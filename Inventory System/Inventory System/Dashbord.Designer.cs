@@ -45,7 +45,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.totalpending = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -184,7 +184,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
-            this.panel5.Controls.Add(this.label10);
+            this.panel5.Controls.Add(this.totalpending);
             this.panel5.Controls.Add(this.panel11);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Location = new System.Drawing.Point(772, 17);
@@ -192,16 +192,17 @@
             this.panel5.Size = new System.Drawing.Size(200, 57);
             this.panel5.TabIndex = 3;
             // 
-            // label10
+            // totalpending
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(66, 24);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 22);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "0";
+            this.totalpending.AutoSize = true;
+            this.totalpending.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalpending.ForeColor = System.Drawing.Color.Black;
+            this.totalpending.Location = new System.Drawing.Point(65, 24);
+            this.totalpending.Name = "totalpending";
+            this.totalpending.Size = new System.Drawing.Size(21, 22);
+            this.totalpending.TabIndex = 11;
+            this.totalpending.Text = "0";
+            this.totalpending.Click += new System.EventHandler(this.label10_Click);
             // 
             // panel11
             // 
@@ -367,6 +368,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dashbordForm";
             this.Text = "Dashbord";
+            this.Load += new System.EventHandler(this.dashbordForm_Load);
             this.panel7.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -404,7 +406,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label totalpending;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label2;
